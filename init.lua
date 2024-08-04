@@ -1,4 +1,5 @@
 --!optimize 2
+print("getting type")
 local Types = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/Types.lua"), true)()
 print("got type")
 local internal = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/Internal.lua", true))()
