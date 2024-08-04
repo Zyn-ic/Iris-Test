@@ -1,6 +1,8 @@
 --!optimize 2
-local Types = require(loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/Types.lua"), true)())
+local Types = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/Types.lua"), true)()
+print("got type")
 local internal = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/Internal.lua", true))()
+print("got internal")
 --[=[
     @class Iris
 
@@ -268,6 +270,7 @@ end
     TemplateConfig provides a table of default styles and configurations which you may apply to your UI.
 ]=]
 local config = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/config.lua"), true)()
+print("got config")
 Iris.TemplateConfig = require(config)
 Iris.UpdateGlobalConfig(Iris.TemplateConfig.colorDark) -- use colorDark and sizeDefault themes by default
 Iris.UpdateGlobalConfig(Iris.TemplateConfig.sizeDefault)
@@ -451,8 +454,11 @@ end
     ```
 ]=]
 local demowindow = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/demoWindow.lua", true))()
+print("got demowindow")
 local widgets = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/widgets/init.lua"), true)()
+print("got twidgetsd")
 local api = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/API.lua"), true)()
+print("got api")
 Iris.ShowDemoWindow = require(demowindow)(Iris)
 
 require(widgets)(Internal)
