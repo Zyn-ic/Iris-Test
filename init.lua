@@ -1,5 +1,5 @@
 --!optimize 2
-local Types = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/Types.lua"), true)()
+local Types = require(loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/Types.lua"), true)())
 local internal = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/Internal.lua", true))()
 --[=[
     @class Iris
