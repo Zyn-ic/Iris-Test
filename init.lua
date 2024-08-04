@@ -12,7 +12,7 @@ print("got internal")
 ]=]
 local Iris = {} :: Types.Iris
 
-local Internal: Types.Internal = require(internal)(Iris)
+local Internal: Types.Internal = internal(Iris)
 
 --[=[
     @prop Disabled boolean
@@ -272,7 +272,7 @@ end
 ]=]
 local config = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/config.lua"), true)()
 print("got config")
-Iris.TemplateConfig = require(config)
+Iris.TemplateConfig = config
 Iris.UpdateGlobalConfig(Iris.TemplateConfig.colorDark) -- use colorDark and sizeDefault themes by default
 Iris.UpdateGlobalConfig(Iris.TemplateConfig.sizeDefault)
 Iris.UpdateGlobalConfig(Iris.TemplateConfig.utilityDefault)
@@ -460,9 +460,9 @@ local widgets = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-i
 print("got twidgetsd")
 local api = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyn-ic/Iris-Test/main/API.lua"), true)()
 print("got api")
-Iris.ShowDemoWindow = require(demowindow)(Iris)
+Iris.ShowDemoWindow = demowindow(Iris)
 
-require(widgets)(Internal)
-require(api)(Iris)
+widgets(Internal)
+api(Iris)
 
 return Iris
